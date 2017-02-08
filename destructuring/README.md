@@ -1,11 +1,12 @@
 # Destructuring
 
-**Definition**: Per [the docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), "Destructuring" allows you to pull out data from arrays and objects into distinct variables with concise syntax.
+**Definition**: Per [the docs](https:/-/developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), "Destructuring" allows you to pull out data from arrays and objects into distinct variables with concise syntax.
 
 ## Arrays
 
 ### Variable Swapping
 Given two variables, swap their values in one line of code.
+
 
 ```js
 var thing1 = 'apple'
@@ -15,15 +16,19 @@ var thing2 = 'banana'
 // => thing2 = 'apple'
 ```
 
+SOLUTION:
+```
+[thing1, thing2] = [thing2, thing1]
+```
+
 ### Assigning New Variable Names to Object Keys
 Given an object, in one line, assign variables to the values of object using different names than the keys already in the object.
 ```js
 const object = {name: 'elvis', title: 'hip swinger'}
 
 // console.log(person) => 'elvis'
-// console.log(job) => 'elvis'
+// console.log(job) => 'hip swinger'
 ```
-
 
 ### Variable Swapping: Array
 
@@ -34,12 +39,12 @@ What if I want to grab the values of the first and second elements of a given ar
 const items = ['apple', 'banana', 'pear']
 
 // Currently, I would get the following returns:
-console.log(items[0]) => 'apple'
-console.log(items[1]) => 'banana'
+console.log(items1) => 'apple'
+console.log(items2) => 'banana'
 
 // Assign variables using ES6 so that we get (note, you cannot just make a completely new array):
-console.log(items[0]) => 'banana';
-console.log(items[1]) => 'apple';
+console.log(items1) => 'banana';
+console.log(items2) => 'apple';
 ```
 
 ### Object Matching
@@ -53,6 +58,7 @@ const object = {
   class: 3
 }
 ```
+// console.log(user) => 'brenna'
 
 ### Object Matching: Deep Matching
 Given an object with nested objects, write one line of code that assigns variables to the keys.
@@ -111,8 +117,8 @@ let name, title
 ```
 
 ### Array Variable Assignment
-
 Given a set of variables, assign the values in one line.
+
 ```js
 let firstName, lastName, city, state;
 // YOUR CODE HERE
